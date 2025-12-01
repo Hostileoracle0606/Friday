@@ -13,8 +13,12 @@ from ..models.oauth_token import OAuthToken, OAuthProvider
 from ..models.task import Task, TaskSource
 from ..schemas.task import TaskCreate, TaskResponse
 from ..services import task_service
-from ...services.ingestion.brightspace_client import BrightspaceClient
-from ...services.ingestion.calendar_client import GoogleCalendarClient
+import sys
+from pathlib import Path
+# Add services to path
+sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent))
+from services.ingestion.brightspace_client import BrightspaceClient
+from services.ingestion.calendar_client import GoogleCalendarClient
 from ..services.encryption_service import encrypt_token, decrypt_token
 
 router = APIRouter(prefix="/sync", tags=["sync"])
