@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from .core.config import settings
-from .routes import auth, task, journal
+from .routes import auth, task, journal, sync
 
 app = FastAPI(
     title="Friday API",
@@ -24,6 +24,7 @@ app.add_middleware(
 app.include_router(auth.router, prefix=settings.API_V1_PREFIX)
 app.include_router(task.router, prefix=settings.API_V1_PREFIX)
 app.include_router(journal.router, prefix=settings.API_V1_PREFIX)
+app.include_router(sync.router, prefix=settings.API_V1_PREFIX)
 
 
 @app.get("/")

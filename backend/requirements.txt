@@ -12,4 +12,9 @@ slowapi==0.1.9
 pytest==7.4.3
 pytest-asyncio==0.21.1
 httpx==0.25.2
+requests==2.31.0
+google-auth==2.23.4
+google-auth-oauthlib==1.1.0
+google-api-python-client==2.108.0
+cryptography==41.0.7
 
