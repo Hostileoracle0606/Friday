@@ -4,6 +4,15 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.pool import StaticPool
 
+import os
+# Set environment variables before importing app
+os.environ.setdefault("DATABASE_URL", "sqlite:///./test.db")
+os.environ.setdefault("SECRET_KEY", "test-secret-key-for-testing-only")
+os.environ.setdefault("ALGORITHM", "HS256")
+os.environ.setdefault("ACCESS_TOKEN_EXPIRE_MINUTES", "30")
+os.environ.setdefault("DEBUG", "True")
+os.environ.setdefault("API_V1_PREFIX", "/api/v1")
+
 from app.core.database import Base, get_db
 from app.core.config import settings
 from app.main import app
