@@ -1,0 +1,12 @@
+# Database
+DATABASE_URL=postgresql://postgres:postgres@localhost:5432/friday_db
+
+# Security
+SECRET_KEY=your-secret-key-here-change-in-production
+ALGORITHM=HS256
+ACCESS_TOKEN_EXPIRE_MINUTES=30
+
+# Application
+DEBUG=True
+API_V1_PREFIX=/api/v1
+
