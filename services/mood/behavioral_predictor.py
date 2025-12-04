@@ -7,9 +7,15 @@ from datetime import datetime, timedelta
 from sqlalchemy.orm import Session
 from sqlalchemy import func, and_
 import uuid
+import sys
+from pathlib import Path
 
-from ...backend.app.models.task import Task, TaskStatus
-from ...backend.app.models.journal import JournalEntry
+# Add backend to path
+backend_path = Path(__file__).parent.parent.parent / "backend"
+sys.path.insert(0, str(backend_path))
+
+from app.models.task import Task, TaskStatus
+from app.models.journal import JournalEntry
 
 
 class BehavioralMoodPredictor:
