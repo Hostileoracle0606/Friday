@@ -17,3 +17,4 @@ class JournalEntry(Base):
     
     user = relationship("User", backref="journal_entries")
 
+

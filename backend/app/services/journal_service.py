@@ -46,3 +46,4 @@ def get_journal_entry_by_id(
         and_(JournalEntry.id == entry_id, JournalEntry.user_id == user_id)
     ).first()
 
+

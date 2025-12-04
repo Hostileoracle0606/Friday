@@ -192,3 +192,4 @@ alembic downgrade -1
 - Ensure virtual environment is activated
 - Run `pip install -r requirements.txt` again
 
+

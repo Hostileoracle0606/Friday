@@ -120,3 +120,4 @@ def test_journal_entries_ordered_by_date(client, auth_headers):
         dates = [datetime.fromisoformat(entry["created_at"].replace("Z", "+00:00")) for entry in data]
         assert dates == sorted(dates, reverse=True)
 
+

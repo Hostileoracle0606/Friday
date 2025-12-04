@@ -36,3 +36,4 @@ def downgrade() -> None:
     op.drop_index('ix_oauth_tokens_user_provider', 'oauth_tokens')
     op.drop_table('oauth_tokens')
 
+

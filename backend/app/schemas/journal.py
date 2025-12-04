@@ -21,3 +21,4 @@ class JournalEntryResponse(JournalEntryBase):
     class Config:
         from_attributes = True
 
+

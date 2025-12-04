@@ -90,3 +90,4 @@ def test_get_current_user_unauthorized(client):
     response = client.get("/api/v1/auth/me")
     assert response.status_code == status.HTTP_401_UNAUTHORIZED
 
+

@@ -164,3 +164,4 @@ def test_get_tasks_with_filter(client, auth_headers):
     data = response.json()
     assert all(task["status"] == "completed" for task in data)
 
+

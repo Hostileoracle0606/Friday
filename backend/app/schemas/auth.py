@@ -20,3 +20,4 @@ class RegisterRequest(BaseModel):
     password: str
     timezone: str = "UTC"
 
+

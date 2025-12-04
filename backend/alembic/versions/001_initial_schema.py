@@ -63,3 +63,4 @@ def downgrade() -> None:
     op.execute('DROP TYPE IF EXISTS taskstatus')
     op.execute('DROP TYPE IF EXISTS tasksource')
 
+

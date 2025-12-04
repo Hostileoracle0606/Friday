@@ -25,3 +25,4 @@ def decrypt_token(encrypted_token: str) -> str:
     f = Fernet(get_encryption_key())
     return f.decrypt(encrypted_token.encode()).decode()
 
+

@@ -68,3 +68,4 @@ def delete_task(db: Session, task_id: uuid.UUID, user_id: uuid.UUID) -> bool:
     db.commit()
     return True
 
+
