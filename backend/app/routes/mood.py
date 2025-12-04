@@ -12,7 +12,6 @@ from ..models.user import User
 from ..models.mood import MoodProfile
 from ..models.journal import JournalEntry
 from ..schemas.mood import MoodProfileResponse, MoodAnalysisRequest
-from ..models.mood import MoodProfile
 
 import sys
 from pathlib import Path
